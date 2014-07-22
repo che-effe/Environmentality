@@ -47,7 +47,9 @@ end
 #for heroku
 ruby '1.9.3', engine: 'jruby', engine_version: '1.7.11'
 
-
+gem "guard", "~>1.8.3"
+gem "guard-rspec"
+gem "guard-jruby-rspec", github: 'jkutner/guard-jruby-rspec'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
