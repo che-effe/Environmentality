@@ -42,6 +42,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    bcrypt (3.1.7-java)
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
     builder (3.1.4)
@@ -211,6 +212,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbcpostgresql-adapter
   activerecord-jdbcsqlite3-adapter
+  bcrypt (~> 3.1.7)
   bootstrap-sass (= 2.3.2.0)
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
