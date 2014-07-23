@@ -45,6 +45,7 @@ group :development, :test do
 # Use jdbcsqlite3 as the database for Active Record
   gem 'activerecord-jdbcsqlite3-adapter'
   gem 'rspec-rails', '2.13.1'
+  gem 'factory_girl_rails', '4.2.0'
 end
 #for heroku
 ruby '1.9.3', engine: 'jruby', engine_version: '1.7.11'
