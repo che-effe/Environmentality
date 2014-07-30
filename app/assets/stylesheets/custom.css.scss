@@ -21,9 +21,14 @@ $darkGrey: #999;
 html {
   overflow-y:scroll;
 }
-//body {
-//  padding-top:60px;
-//}
+body {
+  @media (max-width: 767px){
+    padding:0px;
+  }
+}
+
+
+
 section {
   overflow: auto;
 }
@@ -40,9 +45,18 @@ textarea {
 }
 .hero-unit {
   padding: 150px;
+  @media (max-width: 767px){
+    padding:10px;
+    height:400px;
+    background-size: auto;
+    h1{
+      font-size:40px;
+    }
+  }
   h1, h2{
     color:$almostWhyte;
-
+    letter-spacing: 1px;
+    font-weight:100;
   }
 }
 
@@ -90,6 +104,15 @@ p {
   background-color: $almostWhyte;
   background-image:none;
   border:none;
+}
+.navbar-fixed-top {
+  @media (max-width: 767px){
+    margin-bottom: 0px;
+    padding-left: 30px;
+  }
+  @media (max-width: 979px) {
+    margin-bottom: 0px;
+  }
 }
 #logo {
   float: left;
