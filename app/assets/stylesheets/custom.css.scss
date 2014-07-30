@@ -34,10 +34,21 @@ textarea {
 
 .center {
   text-align: center;
+  background-image: asset-url("blurry-sunset_00436457.jpg", image);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.hero-unit {
+  padding: 150px;
+  h1, h2{
+    color:$almostWhyte;
+
+  }
 }
 
 .center h1 {
   margin-bottom: 10px;
+  font-weight:200;
 }
 .container{
   width:100%;
