@@ -88,7 +88,7 @@ GEM
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
-    jdbc-postgres (9.3.1101)
+    jdbc-postgres (9.3.1102)
     jdbc-sqlite3 (3.7.2.1)
     jquery-rails (3.1.1)
       railties (>= 3.0, < 5.0)
@@ -192,7 +192,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    therubyrhino (2.0.3)
+    therubyrhino (2.0.4)
       therubyrhino_jar (>= 1.7.3)
     therubyrhino_jar (1.7.4)
     thor (0.19.1)
@@ -214,6 +214,7 @@ GEM
 
 PLATFORMS
   java
+  ruby
 
 DEPENDENCIES
   activerecord-jdbcpostgresql-adapter
