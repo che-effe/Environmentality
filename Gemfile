@@ -51,7 +51,7 @@ end
 #ruby=jruby-1.7.11
 
 ruby '1.9.3', engine: 'jruby', engine_version: '1.7.11'
-
+gem 'devise'
 
 gem "guard", "~>1.8.3"
 gem "guard-rspec"
