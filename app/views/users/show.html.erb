@@ -13,13 +13,23 @@
 
         </section>
     </aside>
-    <aside class="span6">
+    <aside class="span7">
         <section>
             <h1><%= @user.name %></h1>
             <h2>Recent Activities</h2>
+            <% if @user.microposts.any? %>
+                <h3>Microposts (<%= @user.microposts.count %>)</h3>
+                <ol class="microposts">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <%= render @microposts %>
+                </ol>
+                <%= will_paginate @microposts %>
+            <% end %>
         </section>
     </aside>
-    <aside class="span2">
+    <aside class="span3">
         <section>
             <h1> &nbsp</h1>
 

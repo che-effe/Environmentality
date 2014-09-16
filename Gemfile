@@ -5,6 +5,7 @@ gem 'rails', '4.0.8'
 
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
+gem 'faker', '1.1.2'
 
 
 # Use SCSS for stylesheets
@@ -52,7 +53,8 @@ end
 
 ruby '1.9.3', engine: 'jruby', engine_version: '1.7.11'
 gem 'devise'
-
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 gem "guard", "~>1.8.3"
 gem "guard-rspec"
 gem "guard-jruby-rspec", github: 'jkutner/guard-jruby-rspec'
