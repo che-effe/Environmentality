@@ -6,6 +6,11 @@ namespace :db do
         password: "Arma3456",
         password_confirmation: "Arma3456",
         admin: true)
+    users = User.all(limit: 6)
+    50.times do
+      content = Faker::Lorem.sentence(5)
+      users.each { |user| user.microposts.create!(content: content) }
+    end
     # Rake::Task['db:reset'].invoke
     make_users
     # make_microposts
