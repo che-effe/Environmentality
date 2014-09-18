@@ -1,8 +1,14 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
         <div class="container">
-            <%= link_to image_tag("Logo.png", alt: "Logo", class: "nonMobile"), root_path, id: "logo" %>
-            <%= link_to image_tag("logo-mobile.png", alt: "Logo", class: "mobile"), root_path, id: "logo" %>
+            <% if signed_in? %>
+                <%= link_to image_tag("Logo.png", alt: "Logo", class: "nonMobile"), current_user, id: "logo" %>
+                <%= link_to image_tag("logo-mobile.png", alt: "Logo", class: "mobile"), current_user, id: "logo" %>
+            <% else %>
+                <%= link_to image_tag("Logo.png", alt: "Logo", class: "nonMobile"), root_path, id: "logo" %>
+                <%= link_to image_tag("logo-mobile.png", alt: "Logo", class: "mobile"), root_path, id: "logo" %>
+            <% end %>
+
             <nav>
                 <ul class="nav pull-right">
                     <li id="fat-menu" class="dropdown mobile" >
