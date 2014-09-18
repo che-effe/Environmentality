@@ -19,3 +19,8 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+var hamburger = $('.hamburger-icon');
+    hamburger.onClick(){
+
+}

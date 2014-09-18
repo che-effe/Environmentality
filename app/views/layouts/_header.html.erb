@@ -1,12 +1,34 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
         <div class="container">
-            <%= link_to image_tag("Logo.png", alt: "Rails"), root_path, id: "logo" %>
+            <%= link_to image_tag("Logo.png", alt: "Logo", class: "nonMobile"), root_path, id: "logo" %>
+            <%= link_to image_tag("logo-mobile.png", alt: "Logo", class: "mobile"), root_path, id: "logo" %>
             <nav>
                 <ul class="nav pull-right">
+                    <li id="fat-menu" class="dropdown mobile" >
+                        <a href="#" class="hamburger-icon dropdown-toggle" data-toggle="dropdown">
+                            &#9776;</b>
+                        </a>
+                        <% if signed_in? %>
+                        <ul class="dropdown-menu">
+                            <li><%= link_to "Profile", current_user %></li>
+                            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                            <li><%= link_to "Users", users_path %></li>
+                            <li class="divider"></li>
+                            <li>
+                                <%= link_to "Sign out", signout_path,  method: "delete" %>
+                            </li>
+                        </ul>
+                        <% else%>
+                            <ul class="dropdown-menu">
+                                <li><%= link_to "Home", root_path%></li>
+                                <li><%= link_to "Sign in", signin_path%></li>
+                            </ul>
+                        <% end %>
+                    </li>
                     <% if signed_in? %>
-                        <li><%= link_to "Users", users_path, class: "btn btn-nav"%></li>
-                        <li id="fat-menu" class="dropdown" >
+                        <li class="nonMobile"><%= link_to "Users", users_path, class: "btn btn-nav"%></li>
+                        <li id="fat-menu" class="dropdown nonMobile" >
                             <a href="#" class="dropdown-toggle btn btn-nav" data-toggle="dropdown">
                                 Account <b class="caret"></b>
                             </a>
