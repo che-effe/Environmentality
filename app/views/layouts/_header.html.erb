@@ -48,9 +48,9 @@
                             </ul>
                         </li>
                     <% else%>
-                        <li><%= link_to "Home",     root_path,      class: "btn btn-nav" %></li>
+                        <li class="nonMobile"><%= link_to "Home",     root_path,      class: "btn btn-nav" %></li>
                         <!--<li><%= link_to "Help",     help_path,      class: "btn btn-nav" %></li>-->
-                        <li><%= link_to "Sign in",  signin_path,    class: "btn btn-nav" %></li>
+                        <li class="nonMobile"><%= link_to "Sign in",  signin_path,    class: "btn btn-nav" %></li>
                     <% end %>
 
                         </ul>
