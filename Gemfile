@@ -43,6 +43,8 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+#Amazon web service for poto storage
+
 group :development, :test do
 # Use jdbcsqlite3 as the database for Active Record
   gem 'activerecord-jdbcsqlite3-adapter'
@@ -63,7 +65,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
+# Paperclip for photo management in the db
+gem "paperclip", "~> 4.2"
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
