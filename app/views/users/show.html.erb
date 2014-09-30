@@ -28,7 +28,7 @@
                     </aside>
                 </div>
             <% end %>
-            <h2>Recent Activity (<%= @user.microposts.count %>)</h2>
+            <h2>Recent Activity (<%= @user.microposts.count %>) <span class="addLink">add new</span></h2>
             <% if @user.microposts.any? %>
                 <ol class="microposts">
                     <%= render @microposts %>
@@ -42,6 +42,13 @@
             <h1> &nbsp</h1>
 
             <h2>Check-ins</h2>
+            <div class="checkinMap"></div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
         </section>
     </aside>
 

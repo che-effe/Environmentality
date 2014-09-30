@@ -308,7 +308,7 @@ aside {
 
 .microposts {
   list-style: none;
-  margin: 10px 0 0 0;
+  margin: 10px 20px 0 20px;
 
   li {
     padding: 10px 0;
@@ -336,6 +336,12 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+}
+
+.checkinMap {
+  width:100%;
+  height:305px;
+  background-image: asset-url("map.png", image);
 }
 aside {
   textarea {
