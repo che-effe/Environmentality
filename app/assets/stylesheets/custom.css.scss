@@ -247,6 +247,22 @@ input {
     margin: 0 0 18px 0;
   }
 }
+.closeBtn {
+  margin:10px;
+  font-size:1.2em;
+  color:$grayMediumLight;
+  :hover{
+    color:$darkGrey;
+  }
+}
+
+.closeBtn:hover{
+  color:$darkGrey;
+}.closeBtn::before{
+  content:'x ';
+  font-stretch: 80px;
+  font-stretch: true;
+ }
 
 
 /* sidebar */
@@ -281,6 +297,17 @@ aside {
       padding: 10px;
       font-weight: normal;
       color: #999;
+      span#addLink{
+        font-size:.8em;
+        cursor:pointer;
+        float:right;
+      }
+      span#addLink::before{
+        cursor:pointer;
+        font-size:1.2em;
+        font-weight:600;
+        content:'+ ';
+      }
     }
   }
 }
