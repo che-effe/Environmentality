@@ -107,6 +107,9 @@ h1 {
   }
   @media (max-width: 767px){
     display:block;
+    font-size: 1.5em;
+    font-weight: 400;
+
   }
 
 }
@@ -315,6 +318,10 @@ aside {
 .gravatar {
   float: left;
   margin: 10px;
+  @media (max-width: 767px){
+    width:140px;
+    height:auto;
+  }
 }
 /* Users index */
 

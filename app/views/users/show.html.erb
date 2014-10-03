@@ -1,21 +1,25 @@
-<% provide(:title, @user.name) %>
+<% provide(:title, 'Profile') %>
 <div class="row">
     <aside class="span3">
         <section>
-            <h1><%= gravatar_for @user, size: 260  %>&nbsp</h1>
-            <h2>Messages</h2>
-            <ul>
+            <%= gravatar_for @user, size: 260  %>
+
+            <h1 class="mobile"><%= @user.name %></h1>
+            <p>member since  <%= @user.created_at.strftime("%b %Y") %></p>
+            <h2 class="nonMobile">Messages</h2>
+            <ul class="nonMobile">
                 <li>(5) New</li>
                 <li>(6) Unread</li>
                 <li>(5) Trash</li>
             </ul>
-            <h2>Settings</h2>
+            <h2 class="nonMobile">Settings</h2>
 
         </section>
     </aside>
     <aside class="span7">
         <section>
-            <h1><%= @user.name %></h1>
+            <h1 class="nonMobile"><%= @user.name %> <span style="float:right; font-size:14px; margin-top:30px;">member since  <%= @user.created_at.strftime("%b %Y") %> </span>
+</h1>
             <% if signed_in? %>
                 <div class="row">
                     <aside class="span4">
@@ -28,7 +32,7 @@
                     </aside>
                 </div>
             <% end %>
-            <h2><span id="addLink" >add new</span> Recent Activity (<%= @user.microposts.count %>)</h2>
+            <h2><span id="addLink" class="nonMobile" >add new</span> Recent Activity (<%= @user.microposts.count %>)</h2>
             <% if @user.microposts.any? %>
                 <ol class="microposts">
                     <%= render @microposts %>
@@ -67,5 +71,3 @@
 
 </script>
 </div>
-
-
