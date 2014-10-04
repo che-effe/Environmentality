@@ -51,6 +51,10 @@ textarea {
 .row {
   margin:0px;
   margin-top:20px;
+  @media (max-width: 767px){
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 .center {
   text-align: center;
@@ -239,7 +243,14 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 15px;
   @include box_sizing;
 }
+button.btn.btn-large,
+input[type="submit"].btn.btn-large {
+  @media (max-width: 767px){
+    margin-top: 50px;
+    width:100%;
+  }
 
+}
 input {
   height: auto !important;
 }
