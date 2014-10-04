@@ -1,6 +1,9 @@
 <li>
     <span class="photo">
-        <%= image_tag micropost.photo.url(:thumb) %>
+        <%= image_tag micropost.photo.url(:medium) %>
+    </span>
+    <span class="photo">
+        <%= image_tag micropost.photo2.url(:medium) %>
     </span>
 
     <h4 class="content"><%= micropost.content %></h4>
