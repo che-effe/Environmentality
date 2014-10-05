@@ -28,6 +28,22 @@ $darkGrey: #999;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+@mixin preview_pane {
+  overflow: hidden;
+  width: 91px;
+  height: 91px;
+  background-color:$teal;
+  color:#ffffff;
+  content:"PHOTO 1";
+  font-size:20px;
+  float:left;
+  margin-right:20px;
+    img{
+      max-width:150% !important;
+      margin-left:-20px;
+      margin-top:-20px;
+    }
+}
 
 
 html {
@@ -244,21 +260,39 @@ input, textarea, select, .uneditable-input {
 }
 button.btn.btn-large,
 input[type="submit"].btn.btn-large {
+  display:block;
+  width:90%;
   @media (max-width: 767px){
     margin-top: 50px;
     width:100%;
+
   }
 
 }
-input {
-  height: auto !important;
+input[type="file"].trashPicer {
+  height: 91px !important;
+  width: 91px;
+  margin-left: -111px;
+  z-index: 1000;
+  opacity: 0;
+  float:left;
 }
+
+// input {
+//   height: auto !important;
+// }
 #error_explanation {
   color: #f00;
   ul {
     list-style: none;
     margin: 0 0 18px 0;
   }
+}
+#preview1.expecting{
+  @include preview_pane;
+}
+#preview2.expecting{
+  @include preview_pane;
 }
 .closeBtn {
   margin:10px;

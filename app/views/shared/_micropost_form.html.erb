@@ -3,12 +3,39 @@
     <div class="field">
         <%= f.text_area :content, placeholder: "New Post" %>
     </div>
-    <div class="field">
-        <%= f.file_field :photo, capture: "camera" %>
+    <div id="preview1" class="expecting" >
     </div>
     <div class="field">
-        <%= f.file_field :photo2, capture: "camera" %>
+        <%= f.file_field :photo, class: "trashPicer one", capture: "camera", onchange: "handleFiles(this.files, 'preview1')" %>
+    </div>
+    <div id="preview2" class="expecting" >
+    </div>
+    <div class="field photo2">
+        <%= f.file_field :photo2,class: "trashPicer two", capture: "camera", onchange: "handleFiles(this.files, 'preview2')" %>
     </div>
     <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <span onclick="addButton.click();" class="closeBtn">close</span>
+<script type="text/javascript">
+    function handleFiles(files, target) {
+      var preview = document.getElementById(target);
+      for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          var imageType = /image.*/;
+
+          if (!file.type.match(imageType)) {
+            continue;
+          }
+
+          var img = document.createElement("img");
+          img.classList.add("obj");
+          img.file = file;
+          preview.appendChild(img); // Assuming that "preview" is a the div output where the content will be displayed.
+
+          var reader = new FileReader();
+          reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+          reader.readAsDataURL(file);
+        }
+      }
+
+</script>
 <% end %>
