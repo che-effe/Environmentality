@@ -3,7 +3,7 @@
     <div class="field">
         <%= f.text_area :content, placeholder: "New Post" %>
     </div>
-    <div id="preview1" class="expecting" >
+    <div id="preview1" class="expecting">
     </div>
     <div class="field">
         <%= f.file_field :photo, class: "trashPicer one", capture: "camera", onchange: "handleFiles(this.files, 'preview1')" %>
@@ -11,7 +11,7 @@
     <div id="preview2" class="expecting" >
     </div>
     <div class="field photo2">
-        <%= f.file_field :photo2,class: "trashPicer two", capture: "camera", onchange: "handleFiles(this.files, 'preview2')" %>
+        <%= f.file_field :photo2,class: "trashPicer two", capture: "camera", style: "margin-left:-140px;", onchange: "handleFiles(this.files, 'preview2')" %>
     </div>
     <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <span onclick="addButton.click();" class="closeBtn">close</span>
