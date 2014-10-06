@@ -30,8 +30,8 @@ $darkGrey: #999;
 }
 @mixin preview_pane {
   overflow: hidden;
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   background-color:$teal;
   color:#ffffff;
   content:"PHOTO 1";
@@ -268,9 +268,9 @@ input[type="submit"].btn.btn-large {
 
 }
 input[type="file"].trashPicer {
-  height: 130px !important;
-  width: 130px;
-  margin-left: -150px;
+  height: 120px !important;
+  width: 120px;
+  margin-left: -140px;
   margin-top:20px;
   z-index: 1000;
   opacity: 0;
@@ -363,7 +363,7 @@ aside {
   float: left;
   margin: 10px;
   @media (max-width: 767px){
-    width:130px;
+    width:120px;
     height:auto;
   }
 }
