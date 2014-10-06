@@ -30,17 +30,18 @@ $darkGrey: #999;
 }
 @mixin preview_pane {
   overflow: hidden;
-  width: 120px;
-  height: 120px;
+  width: 45%;
+  height: auto;
   background-color:$teal;
   color:#ffffff;
   content:"PHOTO 1";
   font-size:20px;
-  float:left;
   margin-top:20px;
+  position:absolute;
+  min-height:100px;
   background-position: center center;
     img{
-      max-width:150% !important;
+      min-width:150% !important;
       margin:auto 0;
     }
 }
@@ -268,13 +269,16 @@ input[type="submit"].btn.btn-large {
 
 }
 input[type="file"].trashPicer {
-  height: 120px !important;
-  width: 120px;
-  margin-left: -140px;
-  margin-top:20px;
+  height: 130px;
+  width: 45%;
+  top: 0;
+  position: absolute;
   z-index: 1000;
+  margin-top:20px;
   opacity: 0;
-  float:left;
+}
+input[type="file"].trashPicer.two {
+  right:0;
 }
 
 // input {
@@ -287,11 +291,26 @@ input[type="file"].trashPicer {
     margin: 0 0 18px 0;
   }
 }
+.photoContainer{
+  position:relative;
+  height: 150px;
+  margin-bottom: 20px;
+}
+.box:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* ratio of 1:1*/
+}
 #preview1.expecting{
-  margin-right:20px;
+  top:0;
+  left:0;
+  bottom: 0;
   @include preview_pane;
 }
 #preview2.expecting{
+  top:0;
+  right:0;
+  bottom: 0;
   @include preview_pane;
 }
 .closeBtn {
