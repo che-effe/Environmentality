@@ -6,27 +6,19 @@
 
             <h1 class="mobile"><%= @user.name %></h1>
             <p>member since  <%= @user.created_at.strftime("%b %Y") %></p>
-            <h2 class="nonMobile">Messages</h2>
-            <ul class="nonMobile">
-                <li>(5) New</li>
-                <li>(6) Unread</li>
-                <li>(5) Trash</li>
-            </ul>
-            <h2 class="nonMobile">Settings</h2>
+            <%= render 'shared/stats' %>
+            <h2 class="nonMobile"><%= link_to "Settings", edit_user_path(current_user ) if current_user?(@user) %></h2>
 
         </section>
+
     </aside>
     <aside class="span7">
         <section>
-            <h1 class="nonMobile"><%= @user.name %> <span style="float:right; font-size:14px; margin-top:30px;">member since  <%= @user.created_at.strftime("%b %Y") %> </span>
-</h1>
+            <h1 class="nonMobile"><%= @user.name %></h1>
             <% if signed_in? %>
-                <div class="row">
+                <div id="postForm" style="display:none;" class="row">
                     <aside class="span4">
-                        <!--<section>-->
-                            <!--<%= render 'shared/user_info' %>-->
-                        <!--</section>-->
-                        <section id="postForm" style="display:none;">
+                        <section >
                             <%= render 'shared/micropost_form' %>
                         </section>
                     </aside>
@@ -44,17 +36,12 @@
     <aside class="span3">
         <section>
             <h1> &nbsp</h1>
+            <%= render 'follow_form' if signed_in? %>
 
             <h2>Check-ins</h2>
 
             <div id="map" style='width: 100%; height: 200px;'></div>
 
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
         </section>
     </aside>
 <script>

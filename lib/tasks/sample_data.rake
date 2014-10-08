@@ -1,29 +1,19 @@
 namespace :db do
   desc "Fill database with sample data"
   task :populate => :environment do
+    # Rake::Task['db:reset'].invoke
+    make_users
+    make_microposts
+    make_relationships
+  end
+end
+
+def make_users
     admin = User.create!(name: "CF Grugan",
         email: "charles.grugan@gmail.com",
         password: "Arma3456",
         password_confirmation: "Arma3456",
         admin: true)
-    users = User.all(limit: 6)
-    50.times do
-      content = Faker::Lorem.sentence(5)
-      users.each { |user| user.microposts.create!(content: content) }
-    end
-    # Rake::Task['db:reset'].invoke
-    make_users
-    # make_microposts
-    # make_relationships
-  end
-end
-
-def make_users
-      # admin = User.create!(name: "CF Grugan",
-      # email: "charles.grugan@gmail.com",
-      # password: "Arma3456",
-      # password_confirmation: "Arma3456",
-      # admin: true)
   99.times do |n|
     name = Faker::Name.name
     email = "example-#{n+1}@railstutorial.org"
@@ -36,10 +26,12 @@ def make_users
 end
 
 def make_microposts
+  users = User.all(limit: 6)
   50.times do
-    User.all(:limit => 6).each do |user|
-      user.microposts.create!(:content => Faker::Lorem.sentence(5))
-    end
+    content = Faker::Lorem.sentence(5)
+    photo = 'assets/images/sampleimages/image-1.jpg'
+    photo2 = 'assets/images/sampleimages/image-9.jpg'
+    users.each { |user| user.microposts.create!(content: content) }
   end
 end
 
