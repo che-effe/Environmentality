@@ -6,18 +6,9 @@
 
             <h1 class="mobile"><%= @user.name %></h1>
             <p>member since  <%= @user.created_at.strftime("%b %Y") %></p>
-<<<<<<< Updated upstream
-            <h2 class="nonMobile">Messages</h2>
-            <ul class="nonMobile">
-                <li>(5) New</li>
-                <li>(6) Unread</li>
-                <li>(5) Trash</li>
-            </ul>
-            <h2 class="nonMobile">Settings</h2>
-=======
+
             <%= render 'shared/stats' %>
             <h2 class="nonMobile"><%= link_to "Settings", edit_user_path(current_user) if current_user?(@user) %></h2>
->>>>>>> Stashed changes
 
         </section>
     </aside>
