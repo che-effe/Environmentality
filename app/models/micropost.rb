@@ -8,8 +8,8 @@ class Micropost < ActiveRecord::Base
                     :url => "/system/:class/:attachment/:id_partition/:style/:filename",
                     :path => ":rails_root/public/system/:class/:attachment/:id_partition/:style/:filename"
   validates_attachment_content_type :photo2, :content_type => /\Aimage\/.*\Z/
-  validates :photo, presence: true
-  validates :photo2, presence: true
+  # validates :photo, presence: true
+  # validates :photo2, presence: true
   validates :user_id, presence: true
   default_scope -> { order('created_at DESC') }
   validates :content, presence: true, length: { maximum: 140 }
