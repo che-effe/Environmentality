@@ -377,29 +377,10 @@ aside {
     }
   }
 }
-.stats {
-  overflow: auto;
-  a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid $grayLighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: $blue;
-    }
-  }
-  strong {
-    display: block;
-  }
-}
 
 .gravatar {
   float: left;
+  margin: 10px;
   @media (max-width: 767px){
     width:120px;
     height:auto;
@@ -438,10 +419,8 @@ aside {
     padding: 10px 0;
     min-height: 180px;
     border-top: 1px solid #e8e8e8;
-    span {
-      float:left
-    }
     .photo {
+      float:left;
       width:120px;
       margin: 10px;
 
