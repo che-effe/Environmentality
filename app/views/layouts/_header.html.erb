@@ -21,7 +21,11 @@
                             <li><%= link_to "Profile", current_user %></li>
                             <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                             <li><%= link_to "Users", users_path %></li>
+<<<<<<< HEAD
                             <li><%= link_to "following", following_user_path(current_user) %></li>
+=======
+                            <li><%= link_to "following", following_user_path(@user) %></li>
+>>>>>>> 57ee22d808251a7b23ec23c099a970f23efa284d
                             <li class="divider"></li>
                             <li>
                                 <%= link_to "Sign out", signout_path,  method: "delete" %>
