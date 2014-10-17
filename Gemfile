@@ -69,5 +69,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem "paperclip", "~> 4.2"
 # s3 integration for storage of trashpicer photos.
 gem 'aws-sdk'
+
+# adding maps for rails and checkin integration
+gem 'gmaps4rails'
+gem 'geocoder'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
