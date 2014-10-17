@@ -1,0 +1,9 @@
+development:
+  access_key_id: AKIAJWIAAV7JAF2H6TKQ
+  secret_access_key: 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
+  simple_db_consistent_reads: false
+
+production:
+  access_key_id: AKIAJWIAAV7JAF2H6TKQ
+  secret_access_key: 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
+  simple_db_consistent_reads: true

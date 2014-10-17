@@ -13,6 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20141008001925) do
 
+  create_table "locations", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.boolean  "gmaps"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "microposts", force: true do |t|
     t.string   "content"
     t.integer  "user_id"
@@ -22,6 +32,8 @@ ActiveRecord::Schema.define(version: 20141008001925) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "photo2_file_name"
     t.string   "photo2_content_type"
     t.integer  "photo2_file_size"

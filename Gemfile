@@ -67,6 +67,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 # Paperclip for photo management in the db
 gem "paperclip", "~> 4.2"
+# s3 integration for storage of trashpicer photos.
+gem 'aws-sdk'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
-
