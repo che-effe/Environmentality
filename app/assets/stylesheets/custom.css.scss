@@ -259,6 +259,12 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 15px;
   @include box_sizing;
 }
+input[type="text"], input[type="password"]{
+  @media (max-width: 586px){
+    height: auto;
+    font-size: 24px;
+  }
+}
 button.btn.btn-large,
 input[type="submit"].btn.btn-large {
   @media (max-width: 767px){
