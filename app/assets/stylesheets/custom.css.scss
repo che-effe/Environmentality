@@ -32,14 +32,15 @@ $darkGrey: #999;
   overflow: hidden;
   width: 45%;
   height: auto;
-  background-color:$teal;
+  background-image:asset-url("photo1.png", image);
+  background-repeat: no-repeat;
   color:#ffffff;
   content:"PHOTO 1";
   font-size:20px;
   margin-top:20px;
   position:absolute;
   min-height:100px;
-  background-position: center center;
+  // background-position: center center;
     img{
       min-width:150% !important;
       margin:auto 0;
@@ -311,12 +312,15 @@ input[type="file"].trashPicer.two {
   top:0;
   left:0;
   bottom: 0;
+  background-position: 0px 0px;
   @include preview_pane;
 }
 #preview2.expecting{
   top:0;
   right:0;
   bottom: 0;
+  background-position: -165px 0px;
+
   @include preview_pane;
 }
 .closeBtn {

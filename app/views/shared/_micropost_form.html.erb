@@ -32,7 +32,7 @@
           img.classList.add("obj");
           img.file = file;
           preview.appendChild(img); // Assuming that "preview" is a the div output where the content will be displayed.
-
+          preview.style.backgroundPosition = "center center";
           var reader = new FileReader();
           reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
           reader.readAsDataURL(file);

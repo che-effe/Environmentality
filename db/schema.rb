@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141008001925) do
+ActiveRecord::Schema.define(version: 20141018144251) do
 
   create_table "locations", force: true do |t|
     t.string   "name"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20141008001925) do
     t.string   "photo2_content_type"
     t.integer  "photo2_file_size"
     t.datetime "photo2_updated_at"
+    t.float    "lat"
+    t.float    "lon"
   end
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
