@@ -30,12 +30,12 @@ $darkGrey: #999;
 }
 @mixin preview_pane {
   overflow: hidden;
+  background-size: auto 100%;
+  background-position:center center;
+  background-repeat: no-repeat;
   width: 45%;
   height: auto;
-  background-image:asset-url("photo1.png", image);
-  background-repeat: no-repeat;
   color:#ffffff;
-  content:"PHOTO 1";
   font-size:20px;
   margin-top:20px;
   position:absolute;
@@ -312,15 +312,14 @@ input[type="file"].trashPicer.two {
   top:0;
   left:0;
   bottom: 0;
-  background-position: 0px 0px;
+  background-image:asset-url("trashpic1.png", image);
   @include preview_pane;
 }
 #preview2.expecting{
   top:0;
   right:0;
   bottom: 0;
-  background-position: -165px 0px;
-
+  background-image:asset-url("trashpic2.png", image);
   @include preview_pane;
 }
 .closeBtn {
