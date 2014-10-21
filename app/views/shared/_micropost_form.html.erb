@@ -1,8 +1,7 @@
 <%= form_for @micropost, :html => { :multipart => true } do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
-    <div class="field">
-        <%= f.text_area :content, placeholder: "New Post" %>
-    </div>
+    <p> Earn points by taking a photo of a piece of litter, then a picture of the trash can where you toss it.</p>
+
     <div class="photoContainer">
       <div id="preview1" class="expecting">
       </div>
@@ -12,6 +11,9 @@
       </div>
           <%= f.file_field :photo2, class: "trashPicer two", capture: "camera", onchange: "handleFiles(this.files, 'preview2')" %>
 
+    </div>
+    <div class="field">
+        <%= f.text_area :content, placeholder: "Where are you?" %>
     </div>
     <div class="field">
       <%= f.submit "Post", class: "btn btn-large btn-primary" %>

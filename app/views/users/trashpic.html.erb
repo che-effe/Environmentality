@@ -1,6 +1,1 @@
-<% if @user.microposts.any? %>
-    <ol class="microposts">
-        <%= render @microposts %>
-    </ol>
-    <%= will_paginate @microposts %>
-<% end %>
+<%= render 'shared/micropost_form' %>

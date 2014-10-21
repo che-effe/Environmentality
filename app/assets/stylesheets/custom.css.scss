@@ -96,6 +96,21 @@ textarea {
     font-weight:100;
   }
 }
+.hero-about {
+  padding: 100px;
+  @media (max-width: 586px){
+    padding:20px;
+    h1{
+      font-size:40px;
+    }
+  }
+  h1, h2{
+    color:$darkGrey;
+    margin-bottom:15px;
+    letter-spacing: 1px;
+    font-weight:100;
+  }
+}
 
 .center h1 {
   margin-bottom: 10px;
@@ -253,7 +268,17 @@ footer ul li {
   margin-left: 10px;
 }
 /* forms */
-
+#postForm{
+  @media (max-width: 586px){
+    position:fixed;
+    top:0px;
+    padding:5%;
+    left:0;
+    height:100%;
+    width:90%;
+    background:#ffffff;
+  }
+}
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -325,7 +350,7 @@ input[type="file"].trashPicer.two {
 .closeBtn {
   margin:10px;
   font-size:1.2em;
-  color:$grayMediumLight;
+  color:$darkGrey;
   :hover{
     color:$darkGrey;
   }

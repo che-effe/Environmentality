@@ -4,7 +4,7 @@
         <section>
             <%= gravatar_for @user, size: 260  %>
 
-            <h1 class="mobile"><%= @user.name %></h1>
+            <h1 class="mobile"><br /><%= @user.name %></h1>
             <p>member since  <%= @user.created_at.strftime("%b %Y") %></p>
 
             <%= render 'shared/stats' %>
@@ -52,10 +52,10 @@
         addButton.onclick = function(){
 
         if( toggle === true)  {
-            $('#postForm').hide(1000);
+            $('#postForm').hide();
             toggle = false;
         }  else {
-            $('#postForm').show(1000);
+            $('#postForm').show();
             toggle = true;
         }
     }
