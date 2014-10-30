@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <style>
+            .iphone{
+                position:absolute;
+                left:-450px;
+                transition: left 2s;
+            }
+            .move {
+                left:50%;
+            }
+        </style>
+        <div class="iphone">
+            <img src="iphoneGold.gif"/>
+            <div class="iphoneConents">
+            </div>
+        </div>
+        <script>
+        setTimeout(function(){
+            $('.iphone').addClass('move');
+        }, 1000)
+
+        </script>
+    </body>
+</html>
