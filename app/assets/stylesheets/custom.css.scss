@@ -75,27 +75,71 @@ textarea {
   }
 }
 .center {
-  text-align: center;
-  background-image: asset-url("blurry-sunset_00436457.jpg", image);
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background: asset-url("blurry-sunset_00436457.jpg", image) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: inline-flex;
 }
-.hero-unit {
-  padding: 150px;
+.home_hero {
+  display:flex;
+  overflow: hidden;
+  padding-top: 100px;
+  color:$almostWhyte;
+  letter-spacing:1;
+  h1{
+    font-size:2em;
+    letter-spacing:1;
+    text-align:left;
+  }
+  h2{
+    letter-spacing: 1px;
+    font-weight:100;
+    color:$almostWhyte;
+    text-align:left;
+
+  }
+  .maintext_buttons{
+    width:30%;
+    @media (max-width: 767px){
+      width:100%;
+    }
+  }
+  .iPhoneContainer{
+    width:70%;
+    max-height: 500px;
+    @media (max-width: 767px){
+      display:none;
+    }
+  }
   @media (max-width: 767px){
     padding:10px;
     height:400px;
     background-size: auto;
     h1{
-      font-size:40px;
+      font-size:2em;
     }
   }
-  h1, h2{
-    color:$almostWhyte;
-    letter-spacing: 1px;
-    font-weight:100;
-  }
 }
+.iphone{
+    margin: auto 0;
+    left:0px;
+    transition: left 2s;
+    height:100%;
+    overflow:hidden;
+
+    img{
+      display:block;
+      margin:0 auto;
+      width:50%;
+      text-align:center;
+    }
+}
+.move {
+    left:50%;
+}
+
 .hero-about {
   padding: 100px;
   @media (max-width: 586px){
@@ -116,10 +160,10 @@ textarea {
   margin-bottom: 10px;
   font-weight:200;
 }
-.container{
-  width:100%;
-  position:static;
-}
+// .container{
+//   width:100%;
+//   position:static;
+// }
 /* Home Page */
 .btn-primary{
   background-color: $teal;
@@ -134,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
+  // letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 
@@ -150,7 +194,11 @@ h1 {
   }
 
 }
-
+.container {
+  @media (max-width: 767px){
+    width: 90%;
+  }
+}
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;

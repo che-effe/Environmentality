@@ -1,11 +1,30 @@
-<div class="center hero-unit">
-    <h1>Keep it Clean</h1>
+<section>
+  <div class="center home_hero ">
+    <div class="container" style="display:flex;">
+      <div class="maintext_buttons">
+            <h1>Meet Environmentality,</h1>
+            <h2>
+                a tool to help Save the Bay, one piece of trash at a time.
+            </h2>
+            <h2>
+                Upload a photo of a piece of litter, throw it out,
+                then upload a photo of the trashcan you threw it in. Compete with
+                friends, and earn points that you can use to save on dining,
+                entertainment and more!
+            </h2>
+            <%= link_to "Get Started", signup_path, class: "btn btn-large btn-primary" %>
+            <%= link_to "Learn More", about_path, class: "btn btn-large btn-primary" %>
+      </div>
 
-    <h2>
-        There is one resource we can simply not live without; water. Work with others around the world to help create a stable environment that helps to sustain our waterways, and the life that it gives. Begin below.
-    </h2>
+        <div class="iPhoneContainer nonMobile">
+          <%= render 'shared/iphone_demo' %>
+        </div>
+      </div>
 
-    <%= link_to "Get Started", signup_path, class: "btn btn-large btn-primary" %>
-    <%= link_to "Learn More", about_path, class: "btn btn-large btn-primary" %>
-
-</div>
+  </div>
+</section>
+<section class='container'>
+  <div class="span5" style="float:right;">
+    <%= render 'shared/new_user' %>
+  </div>
+</section>
