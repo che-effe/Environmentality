@@ -124,10 +124,11 @@ textarea {
 }
 .iphone{
     margin: auto 0;
-    left:0px;
+    left:900px;
     transition: left 2s;
     height:100%;
     overflow:hidden;
+    position: relative;
 
     img{
       display:block;
@@ -137,7 +138,7 @@ textarea {
     }
 }
 .move {
-    left:50%;
+    left:0px;
 }
 
 .hero-about {
