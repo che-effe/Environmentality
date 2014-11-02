@@ -1,11 +1,44 @@
+<style>
+#loadingScreen{
+  height:100%;
+  width:100%;
+}
+.icon {
+  position: relative;
+  margin: 30%;
+  width: 88px;
+}
+
+#loadingScreen h2 {
+  color:#000;
+  text-align:center;
+}
+</style>
 <div class="iphone">
-    <img src="assets/iphoneGold.gif"/>
+    <img id="iphoneimg" src="assets/iphoneGold.gif"/>
     <div class="iphoneConents">
+      <div id="loadingScreen">
+        <img alt="Logo" class="icon" src="/assets/logo-mobile.png">
+        <h2>environmentality</h2>
+      </div>
+      <div id="screen1">
+      </div>
+      <div id="screen2">
+      </div>
+      <div id="screen3">
+      </div>
     </div>
 </div>
 <script>
 setTimeout(function(){
     $('.iphone').addClass('move');
-}, 1000)
+}, 800)
+setTimeout(function(){
+    $('#iphoneimg').addClass('resize');
+}, 800)
+setTimeout(function(){
+    $('.iphoneConents').addClass('move');
+}, 2000)
+
 
 </script>
