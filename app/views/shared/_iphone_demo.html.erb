@@ -1,7 +1,11 @@
 <style>
 #loadingScreen{
+
+}
+div#loadingScreen > div {
   height:100%;
   width:100%;
+  transition: opacity .2s;
 }
 .icon {
   position: relative;
@@ -12,6 +16,40 @@
 #loadingScreen h2 {
   color:#000;
   text-align:center;
+
+}
+#screen1 {
+  background-image: url("assets/profile.png");
+  height:100%;
+  width:100%;
+  opacity:0;
+  transition: opacity .2s;
+  top:0;
+  left:0;
+  position:absolute;
+
+}
+#screen2 {
+  background-image: url("assets/trash-form.png");
+  height:100%;
+  width:100%;
+  opacity:0;
+  transition: opacity .2s;
+  top:0;
+  left:0;
+  position:absolute;
+
+}
+#screen3 {
+  background-image: url("assets/trash-photo.png");
+  height:100%;
+  width:100%;
+  opacity:0;
+  transition: opacity .2s;
+  top:0;
+  left:0;
+  position:absolute;
+
 }
 </style>
 <div class="iphone">
@@ -30,6 +68,34 @@
     </div>
 </div>
 <script>
+
+var i = 0;                     //  set your counter to 1
+var loadingScreen = $("#loadingScreen"),
+screen1 = $("#screen1")
+screen2 = $("#screen2")
+screen3 = $("#screen3");
+var imgArray = [loadingScreen, screen1, screen2, screen3];
+
+
+function myLoop () {           //  create a loop function
+   setTimeout(function () {
+     if (i < imgArray.length-1 ){
+       console.log(imgArray[i] + i);
+       imgArray[i].css({ opacity: 0 });
+       imgArray[i].css({ opacity: 0 });
+       imgArray[i+1].css({ opacity: 1 });
+       i++;
+       myLoop();
+     } else {
+       imgArray[i].css({ opacity: 0 });
+       i = 0;
+       imgArray[0].css({ opacity: 1 });
+       myLoop();
+     }
+   }, 5000)
+
+}
+
 setTimeout(function(){
     $('.iphone').addClass('move');
 }, 800)
@@ -38,7 +104,7 @@ setTimeout(function(){
 }, 800)
 setTimeout(function(){
     $('.iphoneConents').addClass('move');
+    myLoop();
 }, 2000)
-
 
 </script>
