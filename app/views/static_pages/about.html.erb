@@ -1,20 +1,120 @@
 <% provide(:title, 'About') %>
+<style>
+  #team {
+    display: flex;
+    justify-content: space-between;
+  }
+  #team div{
+    max-width:180px;
+    padding: 5px;
+  }
+  #partners {
+    display: flex;
+    justify-content: space-between;
+  }
+  #partners div{
+    max-width:180px;
+    padding: 5px;
+  }
+  .mini-hero{
+    width:100%;
+    height:300px;
+    overflow:hidden;
+    margin-bottom:40px;
+  }
+  .mini-hero img{
+    width:100%;
+
+  }
+  .mini-hero h1{
+    width:100%;
+    background-color: rgba(255,255,255,0.3);
+  }
+</style>
 <div class="hero-about">
-  <h1>About the Idea</h1>
+  <div class="mini-hero">
+    <h1>About the Idea</h1>
+
+    <img src="assets/bay1.png"/>
+
+  </div>
+
   <p>
-  What engages you to take action when you see something that you know is wrong?
-  Most times, doing the right thing is not easy. It’s human nature to believe that
-  one action can’t make a difference. Environmentality hopes to encourage people
-  to do the right thing by rewarding them for taking little steps toward making
-  our world a better place. </p>
-  <h1>How to start</h1>
+  The Chesapeake Bay is one of our nations most treasured natural resources. It
+  supplies Food and water to millions who live in or near it's watershed. But
+  we've noticed something, there is trash and polution everywhere caused by our
+  disregard for such a fragile ecosystem. Environmentality is built to help
+  clean up the bay, starting with one tiny act; Throwing out a piece of litter.</p>
+  <div class="mini-hero">
+    <h1>How to use the web-app</h1>
+    <img src="assets/bay1.png"/>
+
+  </div>
+
   <p>
-  We’re starting with Trash Pic-er. The concept is simple. When you see a piece
+  Our concept is simple. When you see a piece
   of litter on the ground, Take out your mobile device and use the
   Environmentality app to snap a picture of it, then throw it away and snap a
   photo of the trashcan you threw it in. When you submit the photos, you get
-  points that you can use to save on shopping, dining and more!
+  points that you can use to compete with friends, save on shopping, dining and more!
   </p>
+  <h1>The Team</h1>
+  <div id="team">
+    <div>
+      <img src="assets/Cf_headshot1.png"/>
+      <h2 style="text-align:left;">CF Grugan</h2>
+      <span>Founder, Web Developer/System Designer, CTO, Marketer, Bay Enthusiast</span>
+    </div>
+    <div>
+      <img src="assets/neil.png"/>
+      <h2 style="text-align:left;">Neil Harner</h2>
+      <span>Advisor, Strategy consultant, Mentor</span>
+    </div>
+    <div>
+      <img src="assets/default-avatar.png"/>
+      <h2 style="text-align:left;">Tom Barker</h2>
+      <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
+    </div>
+    <div>
+      <img src="assets/mb-headshot.jpg"/>
+      <h2 style="text-align:left;">Mike Ball</h2>
+      <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
+    </div>
+    <div>
+      <img src="assets/pam-headshot.png"/>
+      <h2 style="text-align:left;">Pam Selle</h2>
+      <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
+    </div>
+  </div>
+<h1>Partners</h1>
+<div id="partners">
+  <div>
+    <img src="assets/Cf_headshot1.png"/>
+    <h2 style="text-align:left;">CF Grugan</h2>
+    <span>Founder, Web Developer/System Designer, CTO, Marketer, Bay Enthusiast</span>
+  </div>
+  <div>
+    <img src="assets/neil.png"/>
+    <h2 style="text-align:left;">Neil Harner</h2>
+    <span>Advisor, Strategy consultant, Mentor</span>
+  </div>
+  <div>
+    <img src="assets/default-avatar.png"/>
+    <h2 style="text-align:left;">Tom Barker</h2>
+    <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
+  </div>
+  <div>
+    <img src="assets/mb-headshot.jpg"/>
+    <h2 style="text-align:left;">Mike Ball</h2>
+    <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
+  </div>
+  <div>
+    <img src="assets/pam-headshot.png"/>
+    <h2 style="text-align:left;">Pam Selle</h2>
+    <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
+  </div>
+</div>
+
   <br />
   <%= link_to "Get Started", signup_path, class: "btn btn-large btn-primary" %>
 
