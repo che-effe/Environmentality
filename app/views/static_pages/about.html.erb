@@ -12,7 +12,11 @@
     display: flex;
     justify-content: space-between;
   }
+  #partners img{
+    text-align:center;
+  }
   #partners div{
+    text-align:center;
     max-width:180px;
     padding: 5px;
   }
@@ -30,6 +34,13 @@
     width:100%;
     background-color: rgba(255,255,255,0.3);
   }
+  .flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex > img{
+  height:auto;
+  }
 </style>
 <div class="hero-about">
   <div class="mini-hero">
@@ -45,10 +56,18 @@
   we've noticed something, there is trash and polution everywhere caused by our
   disregard for such a fragile ecosystem. Environmentality is built to help
   clean up the bay, starting with one tiny act; Throwing out a piece of litter.</p>
-  <div class="mini-hero">
-    <h1>How to use the web-app</h1>
-    <img src="assets/bay1.png"/>
+  <h1>How to Play</h1>
 
+  <div class="flex">
+<div>
+    <img src="assets/mobile-capture.png"/>
+  </div>
+    <div>
+    <img src="assets/mobile-trash-confirm.png"/>
+  </div>
+    <div>
+    <img src="assets/mobile-picrgallery.png"/>
+</div>
   </div>
 
   <p>
@@ -86,36 +105,30 @@
       <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
     </div>
   </div>
-<h1>Partners</h1>
+<h1>Our Partners</h1>
 <div id="partners">
   <div>
-    <img src="assets/Cf_headshot1.png"/>
-    <h2 style="text-align:left;">CF Grugan</h2>
-    <span>Founder, Web Developer/System Designer, CTO, Marketer, Bay Enthusiast</span>
+    <img src="assets/foundation.png"/>
+    <h2>Chesapeake Bay Foundation</h2>
+    <span><a href="http://www.cbf.org">www.cbf.org</a></span>
   </div>
   <div>
-    <img src="assets/neil.png"/>
-    <h2 style="text-align:left;">Neil Harner</h2>
-    <span>Advisor, Strategy consultant, Mentor</span>
+    <img src="assets/clc.png"/>
+    <h2>Chesapeake Light Craft</h2>
+    <span><a href="http://www.clcboats.com">www.clcboats.com/</a></span>
   </div>
   <div>
-    <img src="assets/default-avatar.png"/>
-    <h2 style="text-align:left;">Tom Barker</h2>
-    <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
+    <img src="assets/chesapeakeEnergy.png"/>
+    <h2 style="text-align:left;">Chesapeake Energy</h2>
+    <span><a href="http://www.chk.com/">www.chk.com</a></span>
   </div>
   <div>
-    <img src="assets/mb-headshot.jpg"/>
-    <h2 style="text-align:left;">Mike Ball</h2>
-    <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
-  </div>
-  <div>
-    <img src="assets/pam-headshot.png"/>
-    <h2 style="text-align:left;">Pam Selle</h2>
-    <span>Advisor, Strategy consultant, Mentor, Instructor, Board Member</span>
+    <img src="assets/hhmarina.png"/>
+    <h2 style="text-align:left;">Haven Harbour Marina</h2>
+    <span><a href="http://www.havenharbour.com/">www.havenharbour.com</a></span>
   </div>
 </div>
 
   <br />
-  <%= link_to "Get Started", signup_path, class: "btn btn-large btn-primary" %>
 
 </div>

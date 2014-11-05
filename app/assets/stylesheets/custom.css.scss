@@ -269,14 +269,20 @@ p {
   background-color: $almostWhyte;
   background-image:none;
   border:none;
+  height: 100%;
 }
 .navbar-fixed-top {
   position:static;
+  height: 55px;
   @media (max-width: 767px){
     margin-bottom: 0px;
+    height: 70px;
+
   }
   @media (max-width: 979px) {
     margin-bottom: 0px;
+    height: 70px;
+
   }
 }
 
@@ -286,11 +292,14 @@ p {
 
   @media (max-width: 586px){
     cursor:hand;
-    font-size:2em;
+    font-size: 2.5em;
     display:block;
     color:$darkGrey;
     margin-right:10px;
     margin-top:13px;
+    :hover{
+      color:$darkGrey;
+    }
   }
 
 }
