@@ -209,10 +209,29 @@ textarea {
 //   width:100%;
 //   position:static;
 // }
-/* Home Page */
-.btn-primary{
+/* buttons */
+.button {
+  height:40px;
+  display:block;
+ .primary{
+   font-size:2.5em;
+
+ }
+}
+.button.floatL{
+  float:left;
+}
+.primary{
+  font-size:2.5em;
+}
+
+.buttton.teal{
+  display:block;
   background-color: $teal;
   background-image:none;
+}
+.clear{
+  clear:both;
 }
 
 /* typography */
@@ -273,7 +292,7 @@ p {
 }
 .navbar-fixed-top {
   position:static;
-  height: 55px;
+  height: 70px;
   @media (max-width: 767px){
     margin-bottom: 0px;
     height: 70px;
@@ -321,6 +340,7 @@ p {
   padding-top: 9px;
   font-weight: 100;
   line-height: 1;
+  height:55px;
 
 
 }
