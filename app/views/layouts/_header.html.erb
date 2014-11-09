@@ -2,10 +2,10 @@
     <div class="navbar-inner">
         <div class="container">
             <% if signed_in? %>
-                <%= link_to image_tag("Logo.png", alt: "Logo", class: "nonMobile"), current_user, id: "logo" %>
+                <%= link_to image_tag("longlogo.png", alt: "Logo", class: "nonMobile"), current_user, id: "logo" %>
                 <%= link_to image_tag("logo-mobile.png", alt: "Logo", class: "mobile"), current_user, id: "logo" %>
             <% else %>
-                <%= link_to image_tag("Logo.png", alt: "Logo", class: "nonMobile"), root_path, id: "logo" %>
+                <%= link_to image_tag("longlogo.png", alt: "Logo", class: "nonMobile"), root_path, id: "logo" %>
                 <%= link_to image_tag("logo-mobile.png", alt: "Logo", class: "mobile"), root_path, id: "logo" %>
             <% end %>
             <h1 class="mobile headerText"><%= page_title(yield(:title))  %></h1>
@@ -58,9 +58,8 @@
                             </ul>
                         </li>
                     <% else%>
-                        <li class="nonMobile"><%= link_to "Home",     root_path,      class: "btn btn-nav" %></li>
-                        <!--<li><%= link_to "Help",     help_path,      class: "btn btn-nav" %></li>-->
-                        <li class="nonMobile"><%= link_to "Sign in",  signin_path,    class: "btn btn-nav" %></li>
+                        <li class="nonMobile"><%= link_to "Home",     root_path,      class: "button btn-nav" %></li>
+                        <li class="nonMobile"><%= link_to "Sign in",  signin_path,    class: "button btn-nav" %></li>
                     <% end %>
 
                         </ul>

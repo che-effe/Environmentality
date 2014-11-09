@@ -8,6 +8,7 @@ $teal: #46b5b1;
 $navyBlue: #426e84;
 $green: #418743;
 $orangeburn: #D37F30;
+$orange: #C26600;
 $almostWhyte: #eeeeee;
 $darkGrey: #999;
 .nonMobile{
@@ -184,7 +185,11 @@ textarea {
     height:550px;
 }
 
-
+// .startButton {
+//     border: 1px solid #0088cc;
+//     padding: 25px;
+//     display: block;
+// }
 .hero-about {
   padding: 100px;
   @media (max-width: 586px){
@@ -327,9 +332,22 @@ p {
 
   background-color: $orangeburn;
   background-image:none;
+  height:30px;
+  margin:10px;
+  min-width: 90px;
+  text-align:center;
+  font-weight:100;
+  font-size:1.6em;
+  line-height:1em;
+  line-height: 31px;
+
   @media (max-width: 767px){
     display:none;
   }
+}
+.btn-nav:hover{
+    background-color:$orange !important;
+
 }
 #logo {
   float: left;
@@ -341,6 +359,9 @@ p {
   font-weight: 100;
   line-height: 1;
   height:55px;
+  img{
+      height:inherit;
+  }
 
 
 }
