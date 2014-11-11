@@ -356,6 +356,24 @@ p {
     background-color:$orange !important;
 
 }
+.hamburger-icon {
+  position: relative;
+  padding-left: 1.25em !important;
+  display:block;
+  height:40px;
+}
+.hamburger-icon:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: $navyBlue;
+  box-shadow:
+    0 0.25em 0 0 $navyBlue,
+    0 0.5em 0 0 $navyBlue;
+}
 #logo {
   float: left;
   margin-right: 10px;
@@ -366,6 +384,9 @@ p {
   font-weight: 100;
   line-height: 1;
   height:55px;
+  @media (max-width: 767px){
+      height:45px;
+  }
   img{
       height:inherit;
   }
