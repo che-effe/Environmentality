@@ -131,8 +131,9 @@ textarea {
     }
   }
   .iPhoneContainer{
-    width:60%;
+    width:40%;
     height: 500px;
+    margin-left: 185px;
     @media (max-width: 767px){
       display:none;
     }
