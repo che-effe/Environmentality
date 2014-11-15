@@ -68,43 +68,53 @@ div#loadingScreen > div {
     </div>
 </div>
 <script>
+(function(){
+  // create a counter and set it to 0
+  var i = 0;
 
-var i = 0;                     //  set your counter to 1
-var loadingScreen = $("#loadingScreen"),
-screen1 = $("#screen1")
-screen2 = $("#screen2")
-screen3 = $("#screen3");
-var imgArray = [loadingScreen, screen1, screen2, screen3];
+  //select containers to be cycled through from the dom.
+  var loadingScreen = $("#loadingScreen"),
+  screen1 = $("#screen1")
+  screen2 = $("#screen2")
+  screen3 = $("#screen3");
+
+  // array of dom containers to be used by imgLoop below
+  var imgArray = [loadingScreen, screen1, screen2, screen3];
 
 
-function myLoop () {           //  create a loop function
-   setTimeout(function () {
-     if (i < imgArray.length-1 ){
-       console.log(imgArray[i] + i);
-       imgArray[i].css({ opacity: 0 });
-       imgArray[i].css({ opacity: 0 });
-       imgArray[i+1].css({ opacity: 1 });
-       i++;
-       myLoop();
-     } else {
-       imgArray[i].css({ opacity: 0 });
-       i = 0;
-       imgArray[0].css({ opacity: 1 });
-       myLoop();
-     }
-   }, 5000)
+  // create a loop of images using dom containers
+  // using css opacity property to cycle through screens
+  function imgLoop () {
+     setTimeout(function () {
+       if (i < imgArray.length-1 ){
+         console.log(imgArray[i] + i);
+         imgArray[i].css({ opacity: 0 });
+         imgArray[i].css({ opacity: 0 });
+         imgArray[i+1].css({ opacity: 1 });
+         i++;
+         imgLoop();
+       } else {
+         imgArray[i].css({ opacity: 0 });
+         i = 0;
+         imgArray[0].css({ opacity: 1 });
+         imgLoop();
+       }
+     }, 5000)
 
-}
+  }
 
-setTimeout(function(){
-    $('.iphone').addClass('move');
-}, 800)
-setTimeout(function(){
-    $('#iphoneimg').addClass('resize');
-}, 800)
-setTimeout(function(){
-    $('.iphoneConents').addClass('move');
-    myLoop();
-}, 2000)
-
+  // animations that run at the beginning
+  // phone appear
+  // screen turns on
+  setTimeout(function(){
+      $('.iphone').addClass('move');
+  }, 800)
+  setTimeout(function(){
+      $('#iphoneimg').addClass('resize');
+  }, 800)
+  setTimeout(function(){
+      $('.iphoneConents').addClass('move');
+      imgLoop();
+  }, 2000)
+})();
 </script>
