@@ -1,5 +1,6 @@
 Environmentality
 ================
+[![Code Climate](https://codeclimate.com/repos/5467a3ba695680560000a53d/badges/15de1d9d02bca4851dd1/gpa.svg)](https://codeclimate.com/repos/5467a3ba695680560000a53d/feed)
 
 A code repository for the environmentality web application
 
