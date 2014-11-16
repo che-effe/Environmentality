@@ -36,6 +36,6 @@ class Micropost < ActiveRecord::Base
   validates :user_id, presence: true
 
   def s3_credentials
-    {:bucket => 'trashpicer', :access_key_id => 'AKIAJWIAAV7JAF2H6TKQ', :secret_access_key => "xxx"}
+    {:bucket => 'trashpicer', :access_key_id => 'xxxx', :secret_access_key => "xxx"}
   end
 end
