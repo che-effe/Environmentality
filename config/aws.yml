@@ -1,9 +1,9 @@
 development:
-  access_key_id: AKIAJP3XTYOFNXJG4XCQ
-  secret_access_key: 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
+  access_key_id: AKIAIGXD45GMIWVB2VNQ
+  secret_access_key: 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
   simple_db_consistent_reads: false
 
 production:
-  access_key_id: AKIAJP3XTYOFNXJG4XCQ
-  secret_access_key: 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
+  access_key_id: AKIAIGXD45GMIWVB2VNQ
+  secret_access_key: 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
   simple_db_consistent_reads: true

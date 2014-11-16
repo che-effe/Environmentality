@@ -11,6 +11,10 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# Ignore aws secrets and keys.
+/config/application.yml
+/config/aws.yml
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
